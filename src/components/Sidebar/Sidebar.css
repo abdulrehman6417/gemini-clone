@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  background-color: #292b2c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* padding: 0 1.5rem; */
+}
+.top {
+  padding: 0 1.5rem;
+}
+.sidebar .menu {
+  display: block;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.sidebar .new-chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #202123;
+  color: #979696;
+  padding: 0.5rem;
+  border-radius: 50px;
+  margin-top: 3rem;
+}
+
+.new-chat p {
+  @apply text-[0.9rem] font-semibold;
+}
+
+.recent {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.recent .recent-title {
+  @apply text-white mb-4;
+}
+
+.recent-chat {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #b4b3b3;
+  border-radius: 50px;
+  cursor: pointer;
+  /* background-color: #64646448; */
+  padding: 0.3rem 0.8rem;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background-color: #64646448;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 1.6rem;
+  padding: 0 1rem;
+}
+
+.bottom p {
+  font-size: 15px;
+}
